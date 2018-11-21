@@ -1,3 +1,6 @@
+[B]3.0.2.8~nightly7[/B]
+- Fix "Filterbyyear" (Meistbewertet, Populär, Bestes Einspielergebnis,Aktive Betrachter)
+
 [B]3.0.2.8~nightly6[/B]
 - Übersicht in movies.py, tvshows.py, navigator.py umsortiert
 - Mehr Auszeichnungen und Bewertungen unter einen Punkt vereint um die Übersichtlichkeit zu steigern
