@@ -99,7 +99,7 @@ class movies:
         if self.filterbyyear == 'true':
             from_year = control.setting('movies.byyear.from')
             to_year = control.setting('movies.byyear.to')
-            self.clear_link = ('%s', str(from_year), str(to_year))
+            #self.clear_link = ('%s', str(from_year), str(to_year))
             self.genre_link = 'http://www.imdb.com/search/title?title_type=feature,tv_movie,documentary&num_votes=100,&genres=%s&year=%s,%s&sort=moviemeter,asc&count=40&start=1' % ('%s', str(from_year), str(to_year))
             self.award_link = 'http://www.imdb.com/search/title?title_type=feature,tv_movie&groups=%s&year=%s,%s&sort=year,desc&adult=include' % ('%s', str(from_year), str(to_year))
             self.boxoffice_link = 'http://www.imdb.com/search/title?title_type=feature,tv_movie&production_status=released&sort=boxoffice_gross_us,desc&year=%s,%s&count=40&start=1' % (str(from_year), str(to_year))
@@ -306,11 +306,10 @@ class movies:
     def award(self):
         if self.filterbyyear == 'true':
             awards = [
-            #Folgende 4 noch nicht mögich. Darf gefixt werden.
-            #('Meistbewertet', self.featured_link, False),
-            #('Populär', self.popular_link, False),
-            #('Bestes Einspielergebnis', self.boxoffice_link, False),
-            #('Aktive Betrachter', self.views_link, False),
+            ('Meistbewertet', self.featured_link, False),
+            ('Populär', self.popular_link, False),
+            ('Bestes Einspielergebnis', self.boxoffice_link, False),
+            ('Aktive Betrachter', self.views_link, False),
             ('Oskar-Gewinner: Bester Film', 'best_picture_winner', True),
             ('Oskar-Gewinner: Bester Regisseur', 'best_director_winner', True),
             ('Oskar-Gewinner', 'oscar_winner', True), 
